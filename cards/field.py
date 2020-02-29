@@ -12,6 +12,14 @@ class Field:
             if v == '1':
                 self.moves.append(str(index))
         return self.moves
+
+    def get_remaining(self):
+        remaining = 0
+        for f in self.list:
+            if f == '.':
+                continue
+            remaining += 1
+        return remaining
     
     def to_array(self):
         return self.list

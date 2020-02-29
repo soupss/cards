@@ -20,10 +20,10 @@ def run():
     while playing:
         # game state check
         if not '1' in field.list and not '0' in field.list:
-            msg = 'Victory!'
+            msg = f'Victory! on field size {len(field.list)}'
             playing = False
         elif not '1' in field.list:
-            msg = 'Defeat!'
+            msg = f'Defeat! remaining: {field.get_remaining()}'
             playing = False
         
         
